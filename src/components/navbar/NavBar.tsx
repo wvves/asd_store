@@ -1,5 +1,5 @@
-import { useTheme } from "../../utils/hooks/useTheme";
-import classes from "./NavBar.module.css"
+import { useTheme } from "@utils/hooks";
+import classes from "./NavBar.module.css";
 
 const NavBar = () => {
   const {theme, setTheme} = useTheme()
