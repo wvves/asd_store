@@ -1,10 +1,15 @@
 import './App.css'
+import NavBar from './components/navbar/NavBar'
+
 
 function App() {
 
   return (
     <>
-    <div>store</div>
+    <div className='App'>
+      <NavBar/>
+      <div>store</div>
+    </div>
     </>
   )
 }

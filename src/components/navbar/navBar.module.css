@@ -1,0 +1,47 @@
+.navbar {
+  display: flex;
+  padding: 0 40px;
+  flex-direction: row;
+  height: 60px;
+  box-shadow: 1px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 10px var(--color-shadow);
+}
+
+.lunar_img {
+  display: block;
+  width: 175px;
+  height: 45px;
+  position: relative;
+}
+
+.lunar_blessing {
+  background-image: url("/lunar-blessing.jpg");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.asd_store {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 175px;
+  height: 45px;
+  font-weight: 600;
+  font-style: italic;
+  color: black;
+}
+
+.right_el {
+  display: flex;
+  gap: 5px;
+}
+
+input {
+  margin: 5px;
+}
