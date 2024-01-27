@@ -22,7 +22,8 @@
 
     "baseUrl": "./src",
     "paths": {
-      "@utils/hooks": ["./utils/hooks"]
+      "@utils/hooks": ["./utils/hooks"],
+      "@utils/context": ["./utils/context"],
     }
   },
   "include": ["src"],
