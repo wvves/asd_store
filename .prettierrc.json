@@ -8,6 +8,6 @@
   "arrowParens": "always",
   "useTabs": false,
   "bracketSpacing": true,
-  "bracketSameLine": true,
-  "singleAttributePerLine": true
+  "bracketSameLine": false,
+  "singleAttributePerLine": false
 }

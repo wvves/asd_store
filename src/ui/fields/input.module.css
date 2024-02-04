@@ -1,0 +1,37 @@
+.fd_box {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.fd_input:focus {
+  outline: none;
+}
+
+.fd_input {
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  border: 2px solid var(--color);
+  border-radius: 10px;
+  height: 20px;
+  caret-color: var(--color);
+  color: var(--color);
+  font-size: 16px;
+}
+
+.fd_input ~ .fd_label {
+  position: absolute;
+  left: 10px;
+  top: 9px;
+  transition: 0.3s;
+  z-index: -1;
+  cursor: text;
+}
+
+.fd_input:focus ~ .fd_label,
+.fd_input:not([value='']) ~ .fd_label {
+  top: -23px;
+  font-size: 14px;
+  transition: 0.3s;
+}

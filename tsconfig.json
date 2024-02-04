@@ -22,8 +22,12 @@
 
     "baseUrl": "./src",
     "paths": {
+      "@components": ["./components"],
+      "@pages": ["./pages"],
       "@utils/hooks": ["./utils/hooks"],
       "@utils/context": ["./utils/context"],
+      "@ui/fields": ["./ui/fields"],
+      "@ui/buttons": ["./ui/buttons"]
     }
   },
   "include": ["src"],

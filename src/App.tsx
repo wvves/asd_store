@@ -1,17 +1,50 @@
-import NavBar from './components/navbar/NavBar';
-import { useAuth } from '@utils/hooks';
+import React from 'react';
+import { NavBar, Modal } from '@components';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Home, Login, NotFoundPage } from '@pages';
 import './App.css';
 
+// const AuthRoutes = () => {
+//   return (
+//     <Routes>
+//       <Route path='/auth' element={<LoginPage />} />
+//       <Route path='/registration' element={<RegistrationPage />} />
+//       <Route path='*' element={<Navigate to={'/auth'} />} />
+//     </Routes>
+//   );
+// };
+
+const MainRoutes: React.FC = () => {
+  return (
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='*' element={<NotFoundPage />} />
+    </Routes>
+  );
+};
+
 function App() {
-  const {auth, setAuth} = useAuth()
+  const [isOpenModal, setIsModalOpen] = React.useState(false);
+
+  const modalFunc = () => {
+    setIsModalOpen(!isOpenModal);
+  };
   return (
     <>
-      <div className='App'>
-        <NavBar />
-        <div>store</div>
-        <div>{'is auth ' + auth}</div>
-        <button onClick={() => setAuth(!auth)}>enter</button>
-      </div>
+      <BrowserRouter>
+        <div className='App'>
+          <NavBar openModal={modalFunc} />
+          {/* {auth === false ? <AuthRoutes /> : <MainRoutes />} */}
+          <MainRoutes />
+          {isOpenModal && (
+            <Modal
+              modal={isOpenModal}
+              closeModal={modalFunc}
+              children={<Login />}
+            />
+          )}
+        </div>
+      </BrowserRouter>
     </>
   );
 }

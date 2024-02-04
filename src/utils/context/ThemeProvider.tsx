@@ -3,7 +3,9 @@ import React from 'react';
 import darkMode from '../../theming/dark/dark.module.css';
 import lightMode from '../../theming/light/light.module.css';
 
-export const ThemeProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
+export const ThemeProvider: React.FC<React.PropsWithChildren> = ({
+  children
+}) => {
   const [currentTheme, setCurrentTheme] = React.useState<string | null>(
     localStorage.getItem('theme')
   );
@@ -21,7 +23,8 @@ export const ThemeProvider: React.FC<React.PropsWithChildren> = ({ children }) =
       <div
         className={
           currentTheme === 'dark' ? darkMode.darkTheme : lightMode.lightTheme
-        }>
+        }
+      >
         {children}
       </div>
     </ThemeContext.Provider>
