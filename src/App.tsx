@@ -13,7 +13,6 @@ import './App.css';
 //     </Routes>
 //   );
 // };
-
 const MainRoutes: React.FC = () => {
   return (
     <Routes>
@@ -25,7 +24,6 @@ const MainRoutes: React.FC = () => {
 
 function App() {
   const [isOpenModal, setIsModalOpen] = React.useState(false);
-
   const modalFunc = () => {
     setIsModalOpen(!isOpenModal);
   };

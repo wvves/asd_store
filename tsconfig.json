@@ -26,6 +26,7 @@
       "@pages": ["./pages"],
       "@utils/hooks": ["./utils/hooks"],
       "@utils/context": ["./utils/context"],
+      "@utils/firebase": ["./utils/firebase"],
       "@ui/fields": ["./ui/fields"],
       "@ui/buttons": ["./ui/buttons"]
     }

@@ -12,6 +12,7 @@ export default defineConfig({
       '@pages': path.resolve(__dirname, './src/pages'),
       '@utils/hooks': path.resolve(__dirname, './src/utils/hooks'),
       '@utils/context': path.resolve(__dirname, './src/utils/context'),
+      '@utils/firebase': path.resolve(__dirname, './src/utils/firebase'),
       '@ui/fields': path.resolve(__dirname, './src/ui/fields'),
       '@ui/buttons': path.resolve(__dirname, './src/ui/buttons')
     }

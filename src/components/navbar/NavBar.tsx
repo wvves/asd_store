@@ -2,6 +2,7 @@ import { useAuth, useTheme } from '@utils/hooks';
 import classes from './NavBar.module.css';
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
+import { useAuthState } from '@utils/firebase';
 
 type NavBarProps = {
   openModal: () => void;
@@ -10,8 +11,9 @@ type NavBarProps = {
 export const NavBar: React.FC<NavBarProps> = ({ openModal }) => {
   const { theme, setTheme } = useTheme();
   const { auth } = useAuth();
+  const { data } = useAuthState()
   const navigate = useNavigate();
-
+  console.log(auth, data)
   return (
     <>
       <div className={classes.navbar}>

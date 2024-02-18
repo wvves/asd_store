@@ -6,6 +6,6 @@ type AuthContextType = {
 };
 
 export const AuthContext = React.createContext<AuthContextType>({
-  auth: false,
+  auth: null,
   setAuth: () => {}
 });
